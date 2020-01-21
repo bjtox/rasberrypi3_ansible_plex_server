@@ -1,16 +1,42 @@
-# rasberrypi3_ansible_plex_server
-A playbook to install plexServer on raspberry pi3
+# raspberrypi3_ansible_plex_server
+A playbook to install plexServer on debian based OS
 
 UNDER COSTRUCTION
 
 ## Requirements
-* Rasberry pi 2 or 3
+* raspberrypi 2/3
 * installed distro based on debian
-* a service user like "ansible" with a private key on raspberry
+* a service user like "ansible" with a private key on Remote HOST
+
+## HOW to use
+
+This playbook made a simple installation of plex media plexServer.
+After installation you can open a web interface of PLEX on `http://<hostname>:32400/web/`
+
+###### Required Vars
+```yml
+---
+remote_user: pi
+plex_custom_remote_user: "{{ remote_user }}"
+```
+###### Run
+```bash
+ansible-playbook plays/install_plex.yml
+```
 
 
 #### Credits
-Playbook based on [PiMyLifeUp](https://pimylifeup.com/raspberry-pi-plex-server/)
+Playbook based on [PiMyLifeUp installation guide](https://pimylifeup.com/raspberry-pi-plex-server/)
 
-#### references
+#### References
 * https://www.raspberrypi.org/documentation/remote-access/ssh/passwordless.md
+
+
+###### Tags
+- raspberrypi
+- raspbian
+- debian
+- ubuntu
+- plexmediaserver
+- plex
+- ansible

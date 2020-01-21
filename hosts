@@ -1,0 +1,5 @@
+[raspberry:vars]
+ansible_ssh_private_key_file=/home/antonio/.ssh/raspberry_ansible.pem
+
+[raspberry]
+raspberrypi
